@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:14:05 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 18:00:24 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 20:28:15 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -36,11 +36,23 @@ void	ft_free_lst(t_stack **s_stack)
 	*s_stack = NULL;
 }
 
+void	ft_putstr_fd(char *str, int fd)
+{
+	int	i;
+
+	i = 0;
+	if (!(str))
+		return ;
+	while (str[i])
+		i++;
+	write(fd, str, i);
+}
+
 void	exit_error(t_stack *s_stack)
 {
 	ft_free_lst(&s_stack);
 	free(s_stack);
-	ft_putstr("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	exit(0);
 }
 
