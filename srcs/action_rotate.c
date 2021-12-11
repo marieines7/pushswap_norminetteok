@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 21:01:42 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 17:10:01 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 19:52:47 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,19 @@ void	rotate(t_stack **head)
 
 void	rotate_a(t_stack **head_a)
 {
+	ft_putstr("ra\n");
 	rotate(head_a);
 }
 
 void	rotate_b(t_stack **head_b)
 {
+	ft_putstr("rb\n");
 	rotate(head_b);
 }
 
 void	rotate_a_and_b(t_stack	**head_a, t_stack **head_b)
 {
+	ft_putstr("rr\n");
 	rotate(head_a);
 	rotate(head_b);
 }

@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:22:40 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 16:46:47 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 19:51:00 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ void	push(t_stack **head_1, t_stack **head_2)
 
 void	push_b_to_a(t_stack **head_b, t_stack **head_a)
 {
+	ft_putstr("pa\n");
 	push(head_b, head_a);
 }
 
 void	push_a_to_b(t_stack **head_a, t_stack **head_b)
 {
+	ft_putstr("pb\n");
 	push(head_a, head_b);
 }

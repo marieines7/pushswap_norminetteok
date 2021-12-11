@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:22:29 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 16:49:39 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 19:56:37 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,19 @@ void	swap(t_stack **head)
 
 void	swap_a(t_stack **head_a)
 {
+	ft_putstr("sa\n");
 	swap(head_a);
 }
 
 void	swap_b(t_stack **head_b)
 {
+	ft_putstr("sb\n");
 	swap(head_b);
 }
 
 void	swap_a_and_b(t_stack **head_a, t_stack **head_b)
 {
+	ft_putstr("ss\n");
 	swap(head_a);
 	swap(head_b);
 }

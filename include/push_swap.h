@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:45:20 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 18:00:46 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 20:08:00 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	ft_putstr(char	*s);
 
 /* stack utils */
 void	ft_free_lst(t_stack **s_stack);
-//void	add_to_stack(t_stack **s_stack, int nb);
 void	add_to_stack(t_stack **s_stack, int nb, int m);
 void	printstack(t_stack *s);
 int		ft_strchr_lst(t_stack *s_stack, int nb);
@@ -84,12 +83,8 @@ void	algo_three(t_stack **head);
 void	algo_three_part2(t_stack **head, int top_middle,
 			int top_bottom, int middle_bottom);
 void	algo_five(t_stack **head_a, t_stack **head_b, int nb_chiffres);
-//void	algo_five(t_stack **head_a,
-//			t_stack **head_b, int nb_chiffres);
 void	algo_hundreds(t_stack **head, t_stack **head_a,
 			t_stack **head_b, int nb_chiffres);
-//
-//int		x_times_sorted(t_stack **head);
 int		get_right_pos(t_stack *head);
 
 void	tag_right_pos(t_stack **head_a);
