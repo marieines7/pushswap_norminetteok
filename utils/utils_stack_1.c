@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:14:05 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 17:15:16 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 18:00:24 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -75,16 +75,4 @@ int	ft_strchr_lst(t_stack *s_stack, int nb)
 		s_stack = s_stack->next;
 	}
 	return (0);
-}
-
-//A ENLEVER ainsi que stdio
-void	printstack(t_stack *s)
-{
-	while (s)
-	{
-		printf("\n \n s[%d]=", s->right_index); // A ENLEVER
-		//printf("bin[%lld]=", s->binary_index); // A ENLEVER
-		printf("%d; ", s->data); // A ENLEVER
-		s = s->next;
-	}
 }

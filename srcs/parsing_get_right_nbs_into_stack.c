@@ -6,12 +6,11 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:28:55 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 17:55:39 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 17:59:39 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
 
 void	check_input(t_stack **s_stack, char **tab, int *m)
 {

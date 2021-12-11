@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:59:26 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 17:37:38 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/11 17:59:49 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -41,7 +41,6 @@ int	main(int ac, char **av)
 		nb_chiffres = get_right_numbers_into_stack(av, 1, &s_stack);
 	if (!is_sorted(s_stack))
 		algo(&s_stack, &head_b, nb_chiffres);
-	printstack(s_stack); // a enlever
 	ft_free_lst(&s_stack);
 	return (0);
 }
