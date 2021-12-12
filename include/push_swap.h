@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:45:20 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 20:08:00 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/12 17:21:38 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		is_whitespace(char a);
 int		is_digit(int c);
 int		is_sign(int c);
 int		can_be_number(char c);
-int		ft_atoi(char *s, t_stack **s_stack);
+long	ft_atoi(char *s, t_stack **s_stack);
 char	**ft_split(const char *s, char c);
 
 /* random */
@@ -82,7 +82,7 @@ void	algo_two(t_stack **head);
 void	algo_three(t_stack **head);
 void	algo_three_part2(t_stack **head, int top_middle,
 			int top_bottom, int middle_bottom);
-void	algo_five(t_stack **head_a, t_stack **head_b, int nb_chiffres);
+void	algo_five(t_stack **head_a, t_stack **head_b);
 void	algo_hundreds(t_stack **head, t_stack **head_a,
 			t_stack **head_b, int nb_chiffres);
 int		get_right_pos(t_stack *head);

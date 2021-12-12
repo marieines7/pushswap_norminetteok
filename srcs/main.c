@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:59:26 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 20:06:53 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/12 17:21:13 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -17,9 +17,9 @@ void	algo(t_stack **s_stack, t_stack **head_b, int nb_chiffres)
 		algo_two(s_stack);
 	else if (nb_chiffres == 3)
 		algo_three(s_stack);
-	else if ((nb_chiffres == 4) || (nb_chiffres == 5))
-		algo_five(s_stack, head_b, nb_chiffres);
-	else if (nb_chiffres >= 6 && nb_chiffres <= 500)
+	else if (nb_chiffres == 5)
+		algo_five(s_stack, head_b);
+	else if ((nb_chiffres == 4) || (nb_chiffres >= 6 && nb_chiffres <= 500))
 		resolve(s_stack, head_b);
 }
 

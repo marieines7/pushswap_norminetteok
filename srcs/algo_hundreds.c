@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:51:53 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 21:09:00 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/12 14:30:06 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	resolve(t_stack **head_a, t_stack **head_b)
 
 	i = 0;
 	size = stack_size(head_a);
-	max_bits = n_bits_nb(stack_size(head_a)) + 1;
+	max_bits = n_bits_nb(stack_size(head_a) - 1);
 	tag_right_index(head_a);
 	while (max_bits-- != 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 21:20:54 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 16:51:27 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/12 18:19:05 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -14,7 +14,7 @@
 void	algo_two(t_stack **head)
 {
 	if ((compare((*head), (*head)->next)) == 1)
-		swap(head);
+		swap_a(head);
 	else
 		return ;
 }
@@ -56,23 +56,39 @@ void	algo_three_part2(t_stack **head,
 	else if ((top_middle == -1) && (top_bottom == 1) && (middle_bottom == 1))
 		reverse_rotate_a(head);
 }
-
-void	algo_five(t_stack **head_a, t_stack **head_b, int nb_chiffres)
+/*
+void	algo_five(t_stack **head_a, t_stack **head_b)
 {
 	tag_right_index(head_a);
 	push_a_to_b(head_a, head_b);
-	if (nb_chiffres == 5)
-		push_a_to_b(head_a, head_b);
+	push_a_to_b(head_a, head_b);
 	if (!is_sorted(*head_a))
 		algo_three(head_a);
-	if (nb_chiffres == 5)
-	{
-		if ((*head_b)->data < (*head_b)->next->data)
-			swap_b(head_b);
-		while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
+	if ((*head_b)->data < ((*head_b)->next->data))
+		swap_b(head_b);
+	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
+		rotate_a(head_a);
+	push_b_to_a(head_b, head_a);
+	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
+		rotate_a(head_a);
+	push_b_to_a(head_b, head_a);
+	while (((*head_a)->right_index) != 0)
+		reverse_rotate_a(head_a);
+}
+*/
+
+void	algo_five(t_stack **head_a, t_stack **head_b)
+{
+	tag_right_index(head_a);
+	push_a_to_b(head_a, head_b);
+	push_a_to_b(head_a, head_b);
+	if (!is_sorted(*head_a))
+		algo_three(head_a);
+	if ((*head_b)->data < ((*head_b)->next->data))
+		swap_b(head_b);
+	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
 			rotate_a(head_a);
-		push_b_to_a(head_b, head_a);
-	}
+	push_b_to_a(head_b, head_a);
 	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
 		rotate_a(head_a);
 	push_b_to_a(head_b, head_a);
