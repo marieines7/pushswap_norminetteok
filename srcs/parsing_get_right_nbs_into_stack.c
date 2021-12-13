@@ -24,8 +24,6 @@ void	check_input(t_stack **s_stack, char **tab, int *m)
 			|| (is_sign(tab[*m][l]) && (!is_digit(tab[*m][l + 1])))))
 			exit_error(*s_stack);
 	}
-	//if ((ft_atoi(tab[*m], s_stack) > INT_MAX) || ((ft_atoi(tab[*m], s_stack)) < INT_MIN))
-	//	exit_error(*s_stack);
 	if (ft_strchr_lst(*s_stack, ft_atoi(tab[*m], s_stack))
 		|| tab[*m][0] == '\0')
 		exit_error(*s_stack);

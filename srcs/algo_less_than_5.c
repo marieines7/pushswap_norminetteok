@@ -56,36 +56,16 @@ void	algo_three_part2(t_stack **head,
 	else if ((top_middle == -1) && (top_bottom == 1) && (middle_bottom == 1))
 		reverse_rotate_a(head);
 }
-/*
-void	algo_five(t_stack **head_a, t_stack **head_b)
-{
-	tag_right_index(head_a);
-	push_a_to_b(head_a, head_b);
-	push_a_to_b(head_a, head_b);
-	if (!is_sorted(*head_a))
-		algo_three(head_a);
-	if ((*head_b)->data < ((*head_b)->next->data))
-		swap_b(head_b);
-	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-		rotate_a(head_a);
-	push_b_to_a(head_b, head_a);
-	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-		rotate_a(head_a);
-	push_b_to_a(head_b, head_a);
-	while (((*head_a)->right_index) != 0)
-		reverse_rotate_a(head_a);
-}
-*/
 
-int smallestelement_pos(t_stack *head)
+int	smallestelement_pos(t_stack *head)
 {
-	int min;
-	t_stack *tmp;
-	int pos;
+	int		min;
+	t_stack	*tmp;
+	int		pos;
 
 	pos = 0;
 	tmp = head;
-  	min = head->data;
+	min = head->data;
 	while (tmp)
 	{
 		if (min > tmp->data)
@@ -103,8 +83,6 @@ int smallestelement_pos(t_stack *head)
 	return (pos);
 }
 
-
-
 /*
 int x_times_ra_rra(t_stack **head, int pos)
 {
@@ -114,10 +92,11 @@ int x_times_ra_rra(t_stack **head, int pos)
 	if (pos
 }
 */
+
 void	algo_five(t_stack **head_a, t_stack **head_b)
 {
-//	tag_right_index(head_a);
 	int	pos;
+
 	pos = smallestelement_pos(*head_a);
 	while (pos != 0)
 	{
@@ -134,14 +113,6 @@ void	algo_five(t_stack **head_a, t_stack **head_b)
 	push_a_to_b(head_a, head_b);
 	if (!is_sorted(*head_a))
 		algo_three(head_a);
-	//if ((*head_b)->data < ((*head_b)->next->data))
-	//	swap_b(head_b);
-//	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-//			rotate_a(head_a);
 	push_b_to_a(head_b, head_a);
-//	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-//		rotate_a(head_a);
 	push_b_to_a(head_b, head_a);
-//	while (((*head_a)->right_index) != 0)
-//		reverse_rotate_a(head_a);
 }
