@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:17:04 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/11 20:07:32 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/13 12:57:11 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,15 @@ int	compareint(int a, int b)
 	else if (a < b)
 		return (-1);
 	return (0);
+}
+
+
+void	printstack(t_stack *s)
+{
+	while (s)
+	{
+		printf("\n \n s[%d] =", s->right_index); // A ENLEVER
+		printf("%d; ", s->data); // A ENLEVER
+		s = s->next;
+	}
 }

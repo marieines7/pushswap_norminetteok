@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 21:20:54 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/12 18:19:05 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/13 13:04:50 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../include/push_swap.h"
@@ -77,21 +77,71 @@ void	algo_five(t_stack **head_a, t_stack **head_b)
 }
 */
 
+int smallestelement_pos(t_stack *head)
+{
+	int min;
+	t_stack *tmp;
+	int pos;
+
+	pos = 0;
+	tmp = head;
+  	min = head->data;
+	while (tmp)
+	{
+		if (min > tmp->data)
+			min = tmp->data;
+		tmp = tmp->next;
+	}
+	tmp = head;
+	while (tmp)
+	{
+		if (tmp->data == min)
+			return (pos);
+		tmp = tmp->next;
+		pos++;
+	}
+	return (pos);
+}
+
+
+
+/*
+int x_times_ra_rra(t_stack **head, int pos)
+{
+	int size;
+
+	size = stack_size(head);
+	if (pos
+}
+*/
 void	algo_five(t_stack **head_a, t_stack **head_b)
 {
-	tag_right_index(head_a);
+//	tag_right_index(head_a);
+	int	pos;
+	pos = smallestelement_pos(*head_a);
+	while (pos != 0)
+	{
+		rotate_a(head_a);
+		pos--;
+	}
 	push_a_to_b(head_a, head_b);
+	pos = smallestelement_pos(*head_a);
+	while (pos != 0)
+	{
+		rotate_a(head_a);
+		pos--;
+	}
 	push_a_to_b(head_a, head_b);
 	if (!is_sorted(*head_a))
 		algo_three(head_a);
-	if ((*head_b)->data < ((*head_b)->next->data))
-		swap_b(head_b);
-	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-			rotate_a(head_a);
+	//if ((*head_b)->data < ((*head_b)->next->data))
+	//	swap_b(head_b);
+//	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
+//			rotate_a(head_a);
 	push_b_to_a(head_b, head_a);
-	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
-		rotate_a(head_a);
+//	while (((*head_a)->right_index) != (((*head_b)->right_index) + 1))
+//		rotate_a(head_a);
 	push_b_to_a(head_b, head_a);
-	while (((*head_a)->right_index) != 0)
-		reverse_rotate_a(head_a);
+//	while (((*head_a)->right_index) != 0)
+//		reverse_rotate_a(head_a);
 }

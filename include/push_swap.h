@@ -6,7 +6,7 @@
 /*   By: mloubet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 20:45:20 by mloubet           #+#    #+#             */
-/*   Updated: 2021/12/12 17:21:38 by mloubet          ###   ########.fr       */
+/*   Updated: 2021/12/13 12:56:47 by mloubet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdlib.h>
-
+# include <stdio.h> // a enlever
 typedef struct s_stack
 {
 	int				data;
@@ -94,4 +94,5 @@ int		stack_size(t_stack **head);
 int		n_bits_nb(int n);
 void	resolve(t_stack **head_a, t_stack **head_b);
 
+void	printstack(t_stack *s); // a enlever
 #endif
